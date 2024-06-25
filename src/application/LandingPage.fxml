@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="873.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LandingPageController">
+   <children>
+      <TextField fx:id="takeData" alignment="CENTER" layoutX="112.0" layoutY="174.0" prefHeight="31.0" prefWidth="241.0" promptText="# # # # # # # # # #">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </TextField>
+      <Label layoutX="10.0" layoutY="179.0" prefHeight="30.0" prefWidth="102.0" text="Enter data">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="pressSearch" layoutX="38.0" layoutY="241.0" mnemonicParsing="false" onAction="#SearchPressed" text="Search">
+         <toggleGroup>
+            <ToggleGroup fx:id="selectOpt" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="pressInsert" layoutX="132.0" layoutY="241.0" mnemonicParsing="false" onAction="#InsertPressed" text="Insert" toggleGroup="$selectOpt" />
+      <RadioButton fx:id="pressDelete" layoutX="217.0" layoutY="241.0" mnemonicParsing="false" onAction="#DeletePressed" text="Delete" toggleGroup="$selectOpt" />
+      <Button layoutX="166.0" layoutY="286.0" mnemonicParsing="false" onAction="#extBtn" text="Execute" />
+      <Button layoutX="91.0" layoutY="286.0" mnemonicParsing="false" onAction="#clearBtn" text="Clear" />
+      <Label layoutX="322.0" layoutY="10.0" text="SPLAY TREE">
+         <font>
+            <Font name="System Bold" size="41.0" />
+         </font>
+      </Label>
+      <Label layoutX="249.0" layoutY="69.0" text="Perform the operations and visualize the data for better understanding" />
+      <Label layoutX="14.0" layoutY="149.0" text="Note: Enter data with spacing between them." />
+      <Canvas fx:id="myCanvas" height="406.0" layoutX="409.0" layoutY="150.0" width="450.0" />
+   </children>
+</AnchorPane>
